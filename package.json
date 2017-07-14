@@ -1,10 +1,10 @@
 {
-  "name": "detective",
+  "name": "@sklik/detective",
   "description": "find all require() calls by walking the AST",
   "version": "4.5.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/substack/node-detective.git"
+    "url": "git://github.com/zdychacek/node-detective.git"
   },
   "main": "index.js",
   "keywords": [
@@ -17,10 +17,10 @@
     "test": "tap test/*.js"
   },
   "dependencies": {
-    "acorn": "^4.0.3",
     "defined": "^1.0.0"
   },
   "devDependencies": {
+    "babylon": "^6.17.4",
     "tap": "^5.7.1"
   },
   "license": "MIT",
