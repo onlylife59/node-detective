@@ -1,7 +1,7 @@
 {
   "name": "@zdychacek/detective",
   "description": "find all require() calls by walking the AST",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "repository": {
     "type": "git",
     "url": "git://github.com/zdychacek/node-detective.git"
