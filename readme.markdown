@@ -1,8 +1,8 @@
 # detective
 
-find all calls to `require()` by walking the AST
+*This is a fork of [`detective`](https://www.npmjs.com/package/detective) which uses [Babylon](https://github.com/babel/babylon) parser instead of [`acorn`](https://www.npmjs.com/package/acorn).*
 
-[![build status](https://secure.travis-ci.org/substack/node-detective.png)](http://travis-ci.org/substack/node-detective)
+Finds all calls to `require()` by walking the AST.
 
 # example
 
@@ -19,7 +19,7 @@ var c = require('c');
 strings.js:
 
 ``` js
-var detective = require('detective');
+var detective = require('@zdychacek/detective');
 var fs = require('fs');
 
 var src = fs.readFileSync(__dirname + '/strings_src.js');
@@ -37,7 +37,7 @@ $ node examples/strings.js
 # methods
 
 ``` js
-var detective = require('detective');
+var detective = require('@zdychacek/detective');
 ```
 
 ## detective(src, opts)
@@ -64,16 +64,16 @@ Optionally:
 * `opts.isRequire(node)` - a function returning whether an AST `CallExpression`
 node is a require call
 * `opts.parse` - supply options directly to
-[acorn](https://npmjs.org/package/acorn) with some support for esprima-style
-options `range` and `loc`
-* `opts.ecmaVersion` - default: 8
+[babylon](https://npmjs.org/package/babylon) with some support for esprima-style
+options `range` and `loc`.
+* `opt.parse.plugins` - used to specify a list of `babylon` plugins
 
 # install
 
 With [npm](https://npmjs.org) do:
 
 ```
-npm install detective
+npm install @zdychacek/detective
 ```
 
 # license
